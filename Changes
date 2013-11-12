@@ -1,4 +1,9 @@
 {{$NEXT}}
+
+---
+version: 0.001032
+date:    2013-11-13 02:32:08 Asia/Kuala_Lumpur
+changes:
 - Updated dist metadata
 ---
 version: 0.001031

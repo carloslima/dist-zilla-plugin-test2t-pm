@@ -1,6 +1,4 @@
 package Dist::Zilla::Plugin::test2t;
-
-# ABSTRACT: write like ingy, release like regular perl
 # VERSION
 
 use Moose;
@@ -12,7 +10,8 @@ sub munge_file {
 
     return unless $file->name =~ qr{^test/};
 
-    $file->name =~ s/^test/t/;
+    (my $name = $file->name) =~ s/^test/t/;
+    $file->name( $name );
     $self->log_debug(
         [ 'Renaming file', $file->name ] );
 }
